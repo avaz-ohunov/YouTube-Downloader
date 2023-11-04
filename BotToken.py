@@ -1,3 +1,3 @@
 # BotToken.py
 
-bot_token = "5028052573:AAGjR-bNMwaFPkxbcQFanOG_4SCffHftlAM"
+bot_token = "https://youtu.be/CMR-Sj66c50?t=12"
