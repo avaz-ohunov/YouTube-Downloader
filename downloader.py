@@ -1,7 +1,9 @@
 # downloader.py
 
-from pytube import YouTube
 import os
+
+from pytube import YouTube
+
 
 # Метод скачивания видео
 def video_download(url, quality):
