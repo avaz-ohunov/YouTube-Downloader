@@ -5,7 +5,11 @@ from pytube import YouTube
 # Метод получения качеств видео
 def get_quality(url):
 	url = url
-	video = YouTube(url)
+	video = YouTube(url, 
+				use_oauth = True,
+				allow_oauth_cache = True
+			)
+	
 	quality = set()
 
 	# Цикл передачи качества в множество
@@ -17,14 +21,4 @@ def get_quality(url):
 	quality = list(quality)
 	quality.sort()
 	
-	available_qualities = "Доступные качества для этого видео: "
-
-	# Цикл передачи в строку доступных качеств
-	for quality_str in quality:
-		if quality_str == 1080 or quality_str == 1440 or quality_str == 2160 or quality_str == 4320:
-			continue
-
-		else:
-			available_qualities += str(quality_str) + "p, "
-
-	return available_qualities
+	return quality
